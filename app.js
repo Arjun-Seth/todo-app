@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-let items = ["Buy food", "Cook food", "Eat food"];
+let items = ["Workout", "Breakfast", "Course"];
 let workItems = [];
 
 app.set('view engine', 'ejs');
@@ -41,11 +41,11 @@ app.post("/work", function (res, req) {
     res.redirect('/work');
 })
 
-app.get("/about", function(req, res){
+app.get("/about", function (req, res) {
     res.render('about');
 })
 
-app.listen(3000, function () {
+app.listen(3001, function () {
     console.log("Server is running on port 3000");
 });
 
